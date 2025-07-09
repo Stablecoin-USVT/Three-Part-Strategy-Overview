@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USVT Document Hub - Complete Overview</title>
+    <title>USVT Document Portal - Secure Access</title>
     <style>
         * {
             margin: 0;
@@ -15,675 +15,1120 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             line-height: 1.5;
             color: #1e1e1e;
-            background: #ffffff;
+            background: #f8f9fa;
             min-height: 100vh;
-            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 32px 24px;
-        }
-
-        .header {
+        .access-container {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 48px;
+            max-width: 480px;
+            width: 100%;
+            margin: 24px;
             text-align: center;
-            margin-bottom: 48px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #e5e5e5;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .logo-section {
+            margin-bottom: 32px;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
         .main-title {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 8px;
+            font-size: 1.75rem;
+            font-weight: 600;
             color: #1e1e1e;
-            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            letter-spacing: -0.025em;
         }
 
-        .main-subtitle {
-            font-size: 1.125rem;
+        .subtitle {
+            font-size: 1rem;
             color: #666666;
-            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .security-notice {
+            font-size: 0.875rem;
+            color: #dc2626;
+            font-weight: 500;
+        }
+
+        .access-form {
+            margin: 32px 0;
+        }
+
+        .form-group {
             margin-bottom: 24px;
+            text-align: left;
         }
 
-        .value-showcase {
-            display: inline-block;
-            padding: 16px 24px;
-            background: #f8f8f8;
-            border-radius: 4px;
-            border: 1px solid #e5e5e5;
-        }
-
-        .value-amount {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1e1e1e;
-            margin-bottom: 4px;
-        }
-
-        .value-description {
-            font-size: 0.875rem;
-            color: #666666;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .confidentiality-disclaimer {
-            background: #f8f8f8;
-            border: 1px solid #e5e5e5;
-            border-left: 4px solid #5a6268;
-            padding: 12px 16px;
-            margin-bottom: 32px;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .disclaimer-content {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            font-size: 0.875rem;
-            line-height: 1.4;
-            color: #4a4a4a;
-        }
-
-        .disclaimer-icon {
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-
-        .overview-stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1px;
-            margin-bottom: 48px;
-            border: 1px solid #e5e5e5;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .stat-item {
-            background: #ffffff;
-            padding: 24px 16px;
-            text-align: center;
-            border-right: 1px solid #e5e5e5;
-        }
-
-        .stat-item:last-child {
-            border-right: none;
-        }
-
-        .stat-number {
-            font-size: 1.875rem;
-            font-weight: 600;
-            color: #1e1e1e;
-            margin-bottom: 4px;
+        .form-label {
             display: block;
-        }
-
-        .stat-label {
-            color: #666666;
-            font-size: 0.75rem;
+            font-size: 0.875rem;
             font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 400;
             color: #1e1e1e;
-            margin-bottom: 32px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 6px;
         }
 
-        .connection-flow {
-            margin: 48px 0;
-        }
-
-        .flow-diagram {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .flow-step {
-            padding: 24px;
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
             border: 1px solid #e5e5e5;
             border-radius: 4px;
-            text-align: center;
-            background: #ffffff;
-        }
-
-        .flow-icon {
-            width: 40px;
-            height: 40px;
-            background: #f8f8f8;
-            border: 1px solid #e5e5e5;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            margin: 0 auto 16px;
-        }
-
-        .flow-title-text {
             font-size: 1rem;
-            font-weight: 500;
-            color: #1e1e1e;
-            margin-bottom: 8px;
+            transition: border-color 0.15s ease;
         }
 
-        .flow-description {
-            color: #666666;
-            font-size: 0.875rem;
-            line-height: 1.4;
-        }
-
-        .documents-section {
-            margin: 48px 0;
-        }
-
-        .documents-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 24px;
-        }
-
-        .document-card {
-            background: #ffffff;
-            border: 1px solid #e5e5e5;
-            border-radius: 4px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .document-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .document-card.strategic::before {
-            background: #dc2626;
-        }
-
-        .document-card.liquidity::before {
-            background: #059669;
-        }
-
-        .document-card.regulatory::before {
-            background: #1e40af;
-        }
-
-        .document-header {
-            padding: 24px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .strategic-header {
-            background: #f8f8f8;
-        }
-
-        .liquidity-header {
-            background: #f8f8f8;
-        }
-
-        .regulatory-header {
-            background: #f8f8f8;
-        }
-
-        .document-icon {
-            width: 32px;
-            height: 32px;
-            background: #ffffff;
-            border: 1px solid #e5e5e5;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            margin-bottom: 12px;
-        }
-
-        .document-title {
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin-bottom: 4px;
-            color: #1e1e1e;
-        }
-
-        .document-subtitle {
-            font-size: 0.875rem;
-            color: #666666;
-        }
-
-        .document-content {
-            padding: 24px;
-        }
-
-        .document-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 16px;
-            padding: 8px 0;
-            font-size: 0.75rem;
-            color: #666666;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .document-description {
-            color: #4a4a4a;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            font-size: 0.875rem;
-        }
-
-        .document-actions {
-            display: flex;
-            gap: 8px;
-        }
-
-        .action-btn {
-            flex: 1;
-            padding: 10px 16px;
-            border: 1px solid #e5e5e5;
-            border-radius: 4px;
-            background: #ffffff;
-            color: #1e1e1e;
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.15s ease;
-            text-decoration: none;
-            text-align: center;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: #1e1e1e;
-            color: #ffffff;
+        .form-input:focus {
+            outline: none;
             border-color: #1e1e1e;
+            box-shadow: 0 0 0 2px rgba(30, 30, 30, 0.1);
         }
 
-        .btn-primary:hover {
-            background: #333333;
-            border-color: #333333;
-        }
-
-        .btn-secondary:hover {
-            background: #f8f8f8;
-            border-color: #cccccc;
-        }
-
-        .footer-section {
-            margin-top: 64px;
-            padding-top: 24px;
-            border-top: 1px solid #e5e5e5;
-            text-align: center;
-        }
-
-        .footer-title {
-            font-size: 1.125rem;
-            font-weight: 500;
-            margin-bottom: 8px;
-            color: #1e1e1e;
-        }
-
-        .footer-description {
-            font-size: 0.875rem;
-            color: #666666;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.5;
-        }
-
-        .floating-nav {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background: #5a6268;
-            color: #ffffff;
-            padding: 10px 16px;
-            border-radius: 4px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            text-decoration: none;
+        .access-button {
+            width: 100%;
+            padding: 14px 20px;
+            background: #1e1e1e;
+            color: white;
             border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
             cursor: pointer;
             transition: background-color 0.15s ease;
-            z-index: 1000;
         }
 
-        .floating-nav:hover {
-            background: #4a5056;
+        .access-button:hover:not(:disabled) {
+            background: #333333;
         }
 
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2rem;
-            }
-            
-            .overview-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .flow-diagram {
-                grid-template-columns: 1fr;
-            }
-            
-            .documents-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 24px 16px;
-            }
+        .access-button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .error-message {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            margin-top: 16px;
+            display: none;
+        }
+
+        .footer-info {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .confidential-notice {
+            background: #f8f9fa;
+            border: 1px solid #e5e5e5;
+            border-left: 4px solid #5a6268;
+            padding: 16px;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.875rem;
+            color: #4a4a4a;
+            text-align: left;
+        }
+
+        .contact-info {
+            font-size: 0.75rem;
+            color: #666666;
+            margin-top: 16px;
+        }
+
+        .attempts-warning {
+            background: #fef3cd;
+            border: 1px solid #fde68a;
+            color: #92400e;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            margin-top: 16px;
+            display: none;
         }
 
         @media (max-width: 480px) {
-            .overview-stats {
-                grid-template-columns: 1fr;
+            .access-container {
+                padding: 32px 24px;
+                margin: 16px;
             }
             
-            .document-actions {
-                flex-direction: column;
+            .main-title {
+                font-size: 1.5rem;
             }
+        }
+
+        .loading {
+            display: none;
+            margin-top: 16px;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #e5e5e5;
+            border-top: 2px solid #1e1e1e;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1 class="main-title">USVT Document Hub</h1>
-            <p class="main-subtitle">USD Stablecoin Initiative Documentation</p>
-            <div class="value-showcase">
-                <div class="value-amount">$1 Trillion USD</div>
-                <div class="value-description">Financial Infrastructure</div>
-            </div>
+    <div class="access-container">
+        <div class="logo-section">
+            <div class="logo">🏦</div>
+            <h1 class="main-title">USVT Document Portal</h1>
+            <p class="subtitle">Hong Kong Monetary Authority</p>
+            <p class="security-notice">Authorized Access Only</p>
         </div>
 
-        <!-- Confidentiality Disclaimer -->
-        <div class="confidentiality-disclaimer">
-            <div class="disclaimer-content">
-                <span class="disclaimer-icon">🔒</span>
-                <div class="disclaimer-text">
-                    <strong>CONFIDENTIAL:</strong> This document contains proprietary and confidential information. 
-                    Distribution is restricted to authorized personnel only. 
-                    Unauthorized disclosure is strictly prohibited.
-                </div>
-            </div>
+        <div class="confidential-notice">
+            <strong>🔒 CONFIDENTIAL ACCESS</strong><br>
+            This portal contains sensitive regulatory documentation for the USD Stablecoin Initiative. Access is restricted to authorized HKMA personnel and designated stakeholders only.
         </div>
 
-        <!-- Overview Statistics -->
-        <div class="overview-stats">
-            <div class="stat-item">
-                <span class="stat-number">$1T</span>
-                <div class="stat-label">USD Infrastructure</div>
+        <form class="access-form" id="accessForm">
+            <div class="form-group">
+                <label class="form-label" for="accessCode">Access Code</label>
+                <input 
+                    type="password" 
+                    id="accessCode" 
+                    class="form-input" 
+                    placeholder="Enter your access code"
+                    autocomplete="off"
+                    required
+                >
             </div>
-            <div class="stat-item">
-                <span class="stat-number">50+</span>
-                <div class="stat-label">Target Countries</div>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <div class="stat-label">Shariah Compliant</div>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">2025</span>
-                <div class="stat-label">Launch Timeline</div>
-            </div>
-        </div>
 
-        <!-- USVT Initiative Framework -->
-        <div class="connection-flow">
-            <h2 class="section-title">USVT Initiative Framework</h2>
-            <div class="flow-diagram">
-                <div class="flow-step">
-                    <div class="flow-icon">🎯</div>
-                    <div class="flow-title-text">Strategic Vision</div>
-                    <div class="flow-description">$1 trillion USD infrastructure bridging traditional and Islamic finance systems</div>
-                </div>
-                <div class="flow-step">
-                    <div class="flow-icon">🏦</div>
-                    <div class="flow-title-text">Financial Architecture</div>
-                    <div class="flow-description">Shariah-compliant stablecoin with comprehensive liquidity management framework</div>
-                </div>
-                <div class="flow-step">
-                    <div class="flow-icon">⚖️</div>
-                    <div class="flow-title-text">Global Compliance</div>
-                    <div class="flow-description">Multi-jurisdictional regulatory alignment and international standards adherence</div>
-                </div>
+            <div class="form-group">
+                <label class="form-label" for="organization">Organization</label>
+                <select id="organization" class="form-input" required>
+                    <option value="">Select your organization</option>
+                    <option value="hkma">Hong Kong Monetary Authority (HKMA)</option>
+                    <option value="usvt">USVT Initiative Team</option>
+                </select>
             </div>
-        </div>
 
-        <!-- Project Documentation -->
-        <div class="documents-section">
-            <h2 class="section-title">Project Documentation</h2>
-            
-            <div class="documents-grid">
-                <!-- Strategic Implementation Document -->
-                <div class="document-card strategic">
-                    <div class="document-header strategic-header">
-                        <div class="document-icon">🎯</div>
-                        <h3 class="document-title">Strategic Implementation</h3>
-                        <p class="document-subtitle">Global Financial Infrastructure Initiative</p>
-                    </div>
-                    <div class="document-content">
-                        <div class="document-meta">
-                            <span>Global Scope</span>
-                            <span>Foundation Phase</span>
-                            <span>2025-2027</span>
-                        </div>
-                        <p class="document-description">
-                            Establishes the foundational framework for the $1 trillion USD Shariah-compliant financial infrastructure. Covers institutional partnerships with major banks, sovereign debt restructuring solutions, and multi-phase global expansion strategy.
-                        </p>
-                        <div class="document-actions">
-                            <a href="#" class="action-btn btn-primary" onclick="openStrategicSummary()">View Overview</a>
-                            <a href="#" class="action-btn btn-secondary" onclick="accessStrategicPDF()">Full Details</a>
-                        </div>
-                    </div>
-                </div>
+            <button type="submit" class="access-button" id="submitButton">
+                Access Documents
+            </button>
 
-                <!-- Liquidity Management Document -->
-                <div class="document-card liquidity">
-                    <div class="document-header liquidity-header">
-                        <div class="document-icon">🏦</div>
-                        <h3 class="document-title">Liquidity Management</h3>
-                        <p class="document-subtitle">Shariah-Compliant Financial Operations</p>
-                    </div>
-                    <div class="document-content">
-                        <div class="document-meta">
-                            <span>$1T USD Assets</span>
-                            <span>100% Compliance</span>
-                            <span>Islamic Finance</span>
-                        </div>
-                        <p class="document-description">
-                            Comprehensive technical framework ensuring full Islamic finance compliance through AAOIFI/IFSB standards. Details reserve allocation strategy, risk management protocols, and integration with global Islamic banking networks.
-                        </p>
-                        <div class="document-actions">
-                            <a href="#" class="action-btn btn-primary" onclick="openLiquiditySummary()">View Overview</a>
-                            <a href="#" class="action-btn btn-secondary" onclick="accessLiquidityPDF()">Full Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Regulatory Report Document -->
-                <div class="document-card regulatory">
-                    <div class="document-header regulatory-header">
-                        <div class="document-icon">⚖️</div>
-                        <h3 class="document-title">Regulatory Framework</h3>
-                        <p class="document-subtitle">Hong Kong Licensing & Global Compliance</p>
-                    </div>
-                    <div class="document-content">
-                        <div class="document-meta">
-                            <span>Pre-Licensed</span>
-                            <span>HKD 25M+ Capital</span>
-                            <span>Q1 2026 Launch</span>
-                        </div>
-                        <p class="document-description">
-                            Demonstrates full compliance with Hong Kong's HKMA Ordinance No. 17-2025 stablecoin regulations. Covers legal entity structure, governance frameworks, technical infrastructure, and operational readiness.
-                        </p>
-                        <div class="document-actions">
-                            <a href="#" class="action-btn btn-primary" onclick="openRegulatorySummary()">View Overview</a>
-                            <a href="#" class="action-btn btn-secondary" onclick="accessRegulatoryPDF()">Full Details</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="loading" id="loadingSpinner">
+                <div class="spinner"></div>
             </div>
-        </div>
 
-        <!-- Footer -->
-        <div class="footer-section">
-            <h3 class="footer-title">USVT Initiative Overview</h3>
-            <p class="footer-description">
-                The USD Stablecoin initiative represents a transformative $1 trillion Shariah-compliant financial infrastructure initiative designed to bridge conventional monetary systems with Islamic digital finance through strategic institutional partnerships and comprehensive regulatory compliance.
-            </p>
+            <div class="error-message" id="errorMessage">
+                Invalid access code. Please check your credentials and try again.
+            </div>
+
+            <div class="attempts-warning" id="attemptsWarning">
+                Multiple failed attempts detected. Please contact your administrator if you continue to experience issues.
+            </div>
+        </form>
+
+        <div class="footer-info">
+            <div class="contact-info">
+                <strong>Technical Support:</strong> For access issues, contact your designated USVT representative<br>
+                <strong>Security:</strong> This session is monitored and logged for security purposes
+            </div>
         </div>
     </div>
 
-    <!-- Floating Navigation -->
-    <button class="floating-nav" onclick="showDocumentGuide()">📚 Document Guide</button>
-
     <script>
-        // Document access functions
-        function openStrategicSummary() {
-            window.open('https://stablecoin-usvt.github.io/Strategic-Implementation/', '_blank');
-        }
+        let failedAttempts = 0;
+        const maxAttempts = 3;
+        
+        // Valid access codes mapped to organizations
+        const validCredentials = {
+            'hkma': 'USVT2025',
+            'usvt': 'STABLECOIN-HKMA'
+        };
 
-        function openLiquiditySummary() {
-            window.open('https://stablecoin-usvt.github.io/liquidity-management/', '_blank');
-        }
+        document.getElementById('accessForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const accessCode = document.getElementById('accessCode').value.trim();
+            const organization = document.getElementById('organization').value;
+            const submitButton = document.getElementById('submitButton');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const errorMessage = document.getElementById('errorMessage');
+            const attemptsWarning = document.getElementById('attemptsWarning');
 
-        function openRegulatorySummary() {
-            window.open('https://stablecoin-usvt.github.io/Regulations-Report/', '_blank');
-        }
+            if (!accessCode || !organization) {
+                showError('Please fill in all required fields.');
+                return;
+            }
 
-        function accessStrategicPDF() {
-            window.open('https://stablecoin-usvt.github.io/Strategic-Implementation/Strategic-Implementation-USVT-Global-Financial-Restructuring.pdf', '_blank');
-        }
+            // Show loading state
+            submitButton.disabled = true;
+            loadingSpinner.style.display = 'block';
+            errorMessage.style.display = 'none';
+            attemptsWarning.style.display = 'none';
 
-        function accessLiquidityPDF() {
-            window.open('https://stablecoin-usvt.github.io/liquidity-management/Shariah-Compliant%20Liquidity%20Management%20for%20USVT%20Stablecoin%20.pdf', '_blank');
-        }
-
-        function accessRegulatoryPDF() {
-            window.open('https://stablecoin-usvt.github.io/Regulations-Report/HKMA-Ordinance-17-2025.pdf', '_blank');
-        }
-
-        function showDocumentGuide() {
-            const modal = document.createElement('div');
-            modal.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0,0,0,0.5);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 10000;
-            `;
-
-            const modalContent = document.createElement('div');
-            modalContent.style.cssText = `
-                background: white;
-                padding: 32px;
-                border-radius: 4px;
-                max-width: 600px;
-                margin: 24px;
-                border: 1px solid #e5e5e5;
-                box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-                max-height: 80vh;
-                overflow-y: auto;
-            `;
-
-            modalContent.innerHTML = `
-                <h3 style="color: #1e1e1e; margin-bottom: 24px; font-size: 1.25rem; font-weight: 500; text-align: center;">📚 USVT Project Documentation</h3>
+            // Simulate authentication delay
+            setTimeout(() => {
+                // Check if the access code matches the selected organization
+                const expectedCode = validCredentials[organization];
                 
-                <div style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid #e5e5e5;">
-                    <h4 style="color: #1e1e1e; margin-bottom: 8px; font-size: 1rem; font-weight: 500;">🎯 Strategic Implementation</h4>
-                    <p style="color: #666666; line-height: 1.5; margin-bottom: 12px; font-size: 0.875rem;">
-                        The foundational framework for the $1 trillion USD initiative, covering strategic vision, institutional partnerships, and global expansion roadmap across 50+ countries.
-                    </p>
-                    <div style="display: flex; gap: 8px;">
-                        <button onclick="window.open('https://stablecoin-usvt.github.io/Strategic-Implementation/', '_blank')" 
-                                style="background: #1e1e1e; color: white; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
-                            View Summary
+                if (expectedCode && accessCode === expectedCode) {
+                    // Success - redirect to main document hub
+                    sessionStorage.setItem('usvt_authenticated', 'true');
+                    sessionStorage.setItem('usvt_organization', organization);
+                    sessionStorage.setItem('usvt_access_time', Date.now().toString());
+                    
+                    // In a real implementation, you would redirect to the actual document hub
+                    showMainDocumentHub();
+                } else {
+                    // Failed authentication
+                    failedAttempts++;
+                    
+                    if (organization && validCredentials[organization]) {
+                        showError(`Invalid access code for ${organization === 'hkma' ? 'Hong Kong Monetary Authority (HKMA)' : 'USVT Initiative Team'}. Please verify your credentials.`);
+                    } else {
+                        showError('Invalid access code. Please verify your credentials.');
+                    }
+                    
+                    if (failedAttempts >= maxAttempts) {
+                        attemptsWarning.style.display = 'block';
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Access Temporarily Disabled';
+                        
+                        // Re-enable after 5 minutes (for demo purposes)
+                        setTimeout(() => {
+                            submitButton.disabled = false;
+                            submitButton.textContent = 'Access Documents';
+                            failedAttempts = 0;
+                            attemptsWarning.style.display = 'none';
+                        }, 300000); // 5 minutes
+                    }
+                }
+                
+                submitButton.disabled = false;
+                loadingSpinner.style.display = 'none';
+            }, 1500); // Simulate network delay
+        });
+
+        function showError(message) {
+            const errorMessage = document.getElementById('errorMessage');
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+        }
+
+        function showMainDocumentHub() {
+            // Replace the entire page with the main document hub
+            document.body.innerHTML = `
+                <div style="text-align: center; padding: 48px; background: #f8f9fa; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: white; padding: 48px; border-radius: 8px; border: 1px solid #e5e5e5; max-width: 600px;">
+                        <div style="margin-bottom: 24px;">
+                            <div style="width: 64px; height: 64px; background: #059669; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: white; font-size: 1.5rem;">✅</div>
+                            <h2 style="color: #1e1e1e; margin-bottom: 8px;">Access Granted</h2>
+                            <p style="color: #666666; margin-bottom: 24px;">You have been successfully authenticated. Redirecting to the USVT Document Hub...</p>
+                        </div>
+                        
+                        <div style="background: #f0f9ff; border: 1px solid #bae6fd; padding: 16px; border-radius: 4px; margin-bottom: 24px; font-size: 0.875rem; color: #0c4a6e;">
+                            <strong>Session Information:</strong><br>
+                            Organization: ${sessionStorage.getItem('usvt_organization')}<br>
+                            Access Time: ${new Date().toLocaleString()}<br>
+                            Session ID: ${Math.random().toString(36).substr(2, 9).toUpperCase()}
+                        </div>
+                        
+                        <button onclick="loadDocumentHub()" style="background: #1e1e1e; color: white; padding: 14px 24px; border: none; border-radius: 4px; font-size: 1rem; font-weight: 500; cursor: pointer; margin-right: 12px;">
+                            Continue to Documents
                         </button>
-                        <button onclick="window.open('https://stablecoin-usvt.github.io/Strategic-Implementation/Strategic-Implementation-USVT-Global-Financial-Restructuring.pdf', '_blank')" 
-                                style="background: white; color: #1e1e1e; padding: 8px 12px; border: 1px solid #e5e5e5; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
-                            Full PDF
+                        
+                        <button onclick="logout()" style="background: white; color: #1e1e1e; padding: 14px 24px; border: 1px solid #e5e5e5; border-radius: 4px; font-size: 1rem; font-weight: 500; cursor: pointer;">
+                            Logout
                         </button>
                     </div>
-                </div>
-
-                <div style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid #e5e5e5;">
-                    <h4 style="color: #1e1e1e; margin-bottom: 8px; font-size: 1rem; font-weight: 500;">🏦 Liquidity Management</h4>
-                    <p style="color: #666666; line-height: 1.5; margin-bottom: 12px; font-size: 0.875rem;">
-                        Technical framework for Shariah-compliant operations, reserve structuring, and Islamic finance compliance across global markets with comprehensive risk management.
-                    </p>
-                    <div style="display: flex; gap: 8px;">
-                        <button onclick="window.open('https://stablecoin-usvt.github.io/liquidity-management/', '_blank')" 
-                                style="background: #1e1e1e; color: white; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
-                            View Summary
-                        </button>
-                        <button onclick="window.open('https://stablecoin-usvt.github.io/liquidity-management/Shariah-Compliant%20Liquidity%20Management%20for%20USVT%20Stablecoin%20.pdf', '_blank')" 
-                                style="background: white; color: #1e1e1e; padding: 8px 12px; border: 1px solid #e5e5e5; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
-                            Full PDF
-                        </button>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: 24px;">
-                    <h4 style="color: #1e1e1e; margin-bottom: 8px; font-size: 1rem; font-weight: 500;">⚖️ Regulatory Framework</h4>
-                    <p style="color: #666666; line-height: 1.5; margin-bottom: 12px; font-size: 0.875rem;">
-                        Hong Kong regulatory compliance documentation demonstrating full alignment with HKMA Ordinance No. 17-2025 requirements and global licensing preparation.
-                    </p>
-                    <div style="display: flex; gap: 8px;">
-                        <button onclick="window.open('https://stablecoin-usvt.github.io/Regulations-Report/', '_blank')" 
-                                style="background: #1e1e1e; color: white; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
-                            View Summary
-                        </button>
-                        <button onclick="window.open('https://stablecoin-usvt.github.io/Regulations-Report/HKMA-Ordinance-17-2025.pdf', '_blank')" 
-                                style="background: white; color: #1e1e1e; padding: 8px 12px; border: 1px solid #e5e5e5; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
-                            Full PDF
-                        </button>
-                    </div>
-                </div>
-
-                <div style="text-align: center; padding-top: 16px; border-top: 1px solid #e5e5e5;">
-                    <button onclick="this.closest('.modal-overlay').remove()" 
-                            style="background: #f8f8f8; color: #1e1e1e; padding: 10px 20px; border: 1px solid #e5e5e5; border-radius: 4px; cursor: pointer; font-weight: 500; font-size: 0.875rem;">
-                        Close
-                    </button>
                 </div>
             `;
+        }
 
-            modal.className = 'modal-overlay';
-            modal.appendChild(modalContent);
-            document.body.appendChild(modal);
+        function loadDocumentHub() {
+            // Load the actual USVT Document Hub content
+            document.body.innerHTML = generateDocumentHubHTML();
+            
+            // Add the document hub functionality
+            initializeDocumentHub();
+        }
 
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.remove();
+        function generateDocumentHubHTML() {
+            return `
+                <style>
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+
+                    body {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+                        line-height: 1.5;
+                        color: #1e1e1e;
+                        background: #ffffff;
+                        min-height: 100vh;
+                        font-weight: 400;
+                    }
+
+                    .container {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 32px 24px;
+                    }
+
+                    .header {
+                        text-align: center;
+                        margin-bottom: 48px;
+                        padding-bottom: 24px;
+                        border-bottom: 1px solid #e5e5e5;
+                    }
+
+                    .main-title {
+                        font-size: 2.5rem;
+                        font-weight: 300;
+                        margin-bottom: 8px;
+                        color: #1e1e1e;
+                        letter-spacing: -0.02em;
+                    }
+
+                    .main-subtitle {
+                        font-size: 1.125rem;
+                        color: #666666;
+                        font-weight: 400;
+                        margin-bottom: 24px;
+                    }
+
+                    .value-showcase {
+                        display: inline-block;
+                        padding: 16px 24px;
+                        background: #f8f8f8;
+                        border-radius: 4px;
+                        border: 1px solid #e5e5e5;
+                    }
+
+                    .value-amount {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        color: #1e1e1e;
+                        margin-bottom: 4px;
+                    }
+
+                    .value-description {
+                        font-size: 0.875rem;
+                        color: #666666;
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                    }
+
+                    .session-info {
+                        background: #f0f9ff;
+                        border: 1px solid #bae6fd;
+                        padding: 12px 16px;
+                        border-radius: 4px;
+                        margin-bottom: 32px;
+                        font-size: 0.875rem;
+                        color: #0c4a6e;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    .logout-btn {
+                        background: #dc2626;
+                        color: white;
+                        padding: 6px 12px;
+                        border: none;
+                        border-radius: 4px;
+                        font-size: 0.75rem;
+                        cursor: pointer;
+                        font-weight: 500;
+                    }
+
+                    .logout-btn:hover {
+                        background: #b91c1c;
+                    }
+
+                    .confidentiality-disclaimer {
+                        background: #f8f8f8;
+                        border: 1px solid #e5e5e5;
+                        border-left: 4px solid #5a6268;
+                        padding: 12px 16px;
+                        margin-bottom: 32px;
+                        border-radius: 0 4px 4px 0;
+                    }
+
+                    .disclaimer-content {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 8px;
+                        font-size: 0.875rem;
+                        line-height: 1.4;
+                        color: #4a4a4a;
+                    }
+
+                    .disclaimer-icon {
+                        margin-top: 2px;
+                        flex-shrink: 0;
+                    }
+
+                    .overview-stats {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 1px;
+                        margin-bottom: 48px;
+                        border: 1px solid #e5e5e5;
+                        border-radius: 4px;
+                        overflow: hidden;
+                    }
+
+                    .stat-item {
+                        background: #ffffff;
+                        padding: 24px 16px;
+                        text-align: center;
+                        border-right: 1px solid #e5e5e5;
+                    }
+
+                    .stat-item:last-child {
+                        border-right: none;
+                    }
+
+                    .stat-number {
+                        font-size: 1.875rem;
+                        font-weight: 600;
+                        color: #1e1e1e;
+                        margin-bottom: 4px;
+                        display: block;
+                    }
+
+                    .stat-label {
+                        color: #666666;
+                        font-size: 0.75rem;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                    }
+
+                    .section-title {
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        color: #1e1e1e;
+                        margin-bottom: 32px;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid #e5e5e5;
+                    }
+
+                    .connection-flow {
+                        margin: 48px 0;
+                    }
+
+                    .flow-diagram {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 24px;
+                    }
+
+                    .flow-step {
+                        padding: 24px;
+                        border: 1px solid #e5e5e5;
+                        border-radius: 4px;
+                        text-align: center;
+                        background: #ffffff;
+                    }
+
+                    .flow-icon {
+                        width: 40px;
+                        height: 40px;
+                        background: #f8f8f8;
+                        border: 1px solid #e5e5e5;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.25rem;
+                        margin: 0 auto 16px;
+                    }
+
+                    .flow-title-text {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: #1e1e1e;
+                        margin-bottom: 8px;
+                    }
+
+                    .flow-description {
+                        color: #666666;
+                        font-size: 0.875rem;
+                        line-height: 1.4;
+                    }
+
+                    .documents-section {
+                        margin: 48px 0;
+                    }
+
+                    .documents-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                        gap: 24px;
+                    }
+
+                    .document-card {
+                        background: #ffffff;
+                        border: 1px solid #e5e5e5;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        position: relative;
+                    }
+
+                    .document-card::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 4px;
+                        height: 100%;
+                        z-index: 1;
+                    }
+
+                    .document-card.strategic::before {
+                        background: #dc2626;
+                    }
+
+                    .document-card.liquidity::before {
+                        background: #059669;
+                    }
+
+                    .document-card.regulatory::before {
+                        background: #1e40af;
+                    }
+
+                    .document-header {
+                        padding: 24px;
+                        border-bottom: 1px solid #e5e5e5;
+                        background: #f8f8f8;
+                    }
+
+                    .document-icon {
+                        width: 32px;
+                        height: 32px;
+                        background: #ffffff;
+                        border: 1px solid #e5e5e5;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1rem;
+                        margin-bottom: 12px;
+                    }
+
+                    .document-title {
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                        margin-bottom: 4px;
+                        color: #1e1e1e;
+                    }
+
+                    .document-subtitle {
+                        font-size: 0.875rem;
+                        color: #666666;
+                    }
+
+                    .document-content {
+                        padding: 24px;
+                    }
+
+                    .document-meta {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 16px;
+                        padding: 8px 0;
+                        font-size: 0.75rem;
+                        color: #666666;
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                    }
+
+                    .document-description {
+                        color: #4a4a4a;
+                        line-height: 1.5;
+                        margin-bottom: 20px;
+                        font-size: 0.875rem;
+                    }
+
+                    .document-actions {
+                        display: flex;
+                        gap: 8px;
+                    }
+
+                    .action-btn {
+                        flex: 1;
+                        padding: 10px 16px;
+                        border: 1px solid #e5e5e5;
+                        border-radius: 4px;
+                        background: #ffffff;
+                        color: #1e1e1e;
+                        font-size: 0.875rem;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: all 0.15s ease;
+                        text-decoration: none;
+                        text-align: center;
+                        display: inline-block;
+                    }
+
+                    .btn-primary {
+                        background: #1e1e1e;
+                        color: #ffffff;
+                        border-color: #1e1e1e;
+                    }
+
+                    .btn-primary:hover {
+                        background: #333333;
+                        border-color: #333333;
+                    }
+
+                    .btn-secondary:hover {
+                        background: #f8f8f8;
+                        border-color: #cccccc;
+                    }
+
+                    .footer-section {
+                        margin-top: 64px;
+                        padding-top: 24px;
+                        border-top: 1px solid #e5e5e5;
+                        text-align: center;
+                    }
+
+                    .footer-title {
+                        font-size: 1.125rem;
+                        font-weight: 500;
+                        margin-bottom: 8px;
+                        color: #1e1e1e;
+                    }
+
+                    .footer-description {
+                        font-size: 0.875rem;
+                        color: #666666;
+                        max-width: 600px;
+                        margin: 0 auto;
+                        line-height: 1.5;
+                    }
+
+                    .floating-nav {
+                        position: fixed;
+                        bottom: 24px;
+                        right: 24px;
+                        background: #5a6268;
+                        color: #ffffff;
+                        padding: 10px 16px;
+                        border-radius: 4px;
+                        font-size: 0.875rem;
+                        font-weight: 500;
+                        text-decoration: none;
+                        border: none;
+                        cursor: pointer;
+                        transition: background-color 0.15s ease;
+                        z-index: 1000;
+                    }
+
+                    .floating-nav:hover {
+                        background: #4a5056;
+                    }
+
+                    @media (max-width: 768px) {
+                        .main-title {
+                            font-size: 2rem;
+                        }
+                        
+                        .overview-stats {
+                            grid-template-columns: repeat(2, 1fr);
+                        }
+                        
+                        .flow-diagram {
+                            grid-template-columns: 1fr;
+                        }
+                        
+                        .documents-grid {
+                            grid-template-columns: 1fr;
+                        }
+                        
+                        .container {
+                            padding: 24px 16px;
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        .overview-stats {
+                            grid-template-columns: 1fr;
+                        }
+                        
+                        .document-actions {
+                            flex-direction: column;
+                        }
+                    }
+                </style>
+
+                <div class="container">
+                    <!-- Session Info -->
+                    <div class="session-info">
+                        <div>
+                            <strong>🔐 Authenticated Session:</strong> ${sessionStorage.getItem('usvt_organization')} | 
+                            Access Time: ${new Date().toLocaleString()} | 
+                            Session ID: ${Math.random().toString(36).substr(2, 9).toUpperCase()}
+                        </div>
+                        <button class="logout-btn" onclick="logout()">Logout</button>
+                    </div>
+
+                    <!-- Header -->
+                    <div class="header">
+                        <h1 class="main-title">USVT Document Hub</h1>
+                        <p class="main-subtitle">USD Stablecoin Initiative Documentation</p>
+                        <div class="value-showcase">
+                            <div class="value-amount">$1 Trillion USD</div>
+                            <div class="value-description">Financial Infrastructure</div>
+                        </div>
+                    </div>
+
+                    <!-- Confidentiality Disclaimer -->
+                    <div class="confidentiality-disclaimer">
+                        <div class="disclaimer-content">
+                            <span class="disclaimer-icon">🔒</span>
+                            <div class="disclaimer-text">
+                                <strong>CONFIDENTIAL:</strong> This document contains proprietary and confidential information. 
+                                Distribution is restricted to authorized personnel only. 
+                                Unauthorized disclosure is strictly prohibited.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Overview Statistics -->
+                    <div class="overview-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">$1T</span>
+                            <div class="stat-label">USD Infrastructure</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <div class="stat-label">Target Countries</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <div class="stat-label">Shariah Compliant</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2025</span>
+                            <div class="stat-label">Launch Timeline</div>
+                        </div>
+                    </div>
+
+                    <!-- USVT Initiative Framework -->
+                    <div class="connection-flow">
+                        <h2 class="section-title">USVT Initiative Framework</h2>
+                        <div class="flow-diagram">
+                            <div class="flow-step">
+                                <div class="flow-icon">🎯</div>
+                                <div class="flow-title-text">Strategic Vision</div>
+                                <div class="flow-description">$1 trillion USD infrastructure bridging traditional and Islamic finance systems</div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-icon">🏦</div>
+                                <div class="flow-title-text">Financial Architecture</div>
+                                <div class="flow-description">Shariah-compliant stablecoin with comprehensive liquidity management framework</div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-icon">⚖️</div>
+                                <div class="flow-title-text">Global Compliance</div>
+                                <div class="flow-description">Multi-jurisdictional regulatory alignment and international standards adherence</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Documentation -->
+                    <div class="documents-section">
+                        <h2 class="section-title">Project Documentation</h2>
+                        
+                        <div class="documents-grid">
+                            <!-- Strategic Implementation Document -->
+                            <div class="document-card strategic">
+                                <div class="document-header">
+                                    <div class="document-icon">🎯</div>
+                                    <h3 class="document-title">Strategic Implementation</h3>
+                                    <p class="document-subtitle">Global Financial Infrastructure Initiative</p>
+                                </div>
+                                <div class="document-content">
+                                    <div class="document-meta">
+                                        <span>Global Scope</span>
+                                        <span>Multi-Phase</span>
+                                        <span>2025 Launch</span>
+                                    </div>
+                                    <p class="document-description">
+                                        Establishes the foundational framework for the $1 trillion USD Shariah-compliant financial infrastructure. Covers institutional partnerships with major banks, sovereign debt restructuring solutions, and multi-phase global expansion strategy.
+                                    </p>
+                                    <div class="document-actions">
+                                        <a href="#" class="action-btn btn-primary" onclick="openStrategicSummary()">View Overview</a>
+                                        <a href="#" class="action-btn btn-secondary" onclick="accessStrategicPDF()">Full Details</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Liquidity Management Document -->
+                            <div class="document-card liquidity">
+                                <div class="document-header">
+                                    <div class="document-icon">🏦</div>
+                                    <h3 class="document-title">Liquidity Management</h3>
+                                    <p class="document-subtitle">Shariah-Compliant Financial Operations</p>
+                                </div>
+                                <div class="document-content">
+                                    <div class="document-meta">
+                                        <span>$1T USD Assets</span>
+                                        <span>100% Compliance</span>
+                                        <span>Islamic Finance</span>
+                                    </div>
+                                    <p class="document-description">
+                                        Comprehensive technical framework ensuring full Islamic finance compliance through AAOIFI/IFSB standards. Details reserve allocation strategy, risk management protocols, and integration with global banking networks.
+                                    </p>
+                                    <div class="document-actions">
+                                        <a href="#" class="action-btn btn-primary" onclick="openLiquiditySummary()">View Overview</a>
+                                        <a href="#" class="action-btn btn-secondary" onclick="accessLiquidityPDF()">Full Details</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Regulatory Report Document -->
+                            <div class="document-card regulatory">
+                                <div class="document-header">
+                                    <div class="document-icon">⚖️</div>
+                                    <h3 class="document-title">Regulatory Framework</h3>
+                                    <p class="document-subtitle">Hong Kong Licensing & Global Compliance</p>
+                                </div>
+                                <div class="document-content">
+                                    <div class="document-meta">
+                                        <span>Pre-Licensed</span>
+                                        <span>HKMA Compliant</span>
+                                        <span>2025 Launch</span>
+                                    </div>
+                                    <p class="document-description">
+                                        Demonstrates full compliance with Hong Kong's HKMA Ordinance No. 17-2025 stablecoin regulations. Covers legal entity structure, governance frameworks, technical infrastructure, and operational readiness.
+                                    </p>
+                                    <div class="document-actions">
+                                        <a href="#" class="action-btn btn-primary" onclick="openRegulatorySummary()">View Overview</a>
+                                        <a href="#" class="action-btn btn-secondary" onclick="accessRegulatoryPDF()">Full Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="footer-section">
+                        <h3 class="footer-title">USVT Initiative Overview</h3>
+                        <p class="footer-description">
+                            The USD Value Trust represents a transformative $1 trillion Shariah-compliant financial infrastructure initiative designed to bridge conventional monetary systems with Islamic digital finance through strategic institutional partnerships and comprehensive regulatory compliance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Floating Navigation -->
+                <button class="floating-nav" onclick="showDocumentGuide()">📚 Document Guide</button>
+            `;
+        }
+
+        function initializeDocumentHub() {
+            // Add the document hub functionality
+            window.openStrategicSummary = function() {
+                window.open('https://stablecoin-usvt.github.io/Strategic-Implementation/', '_blank');
+            };
+
+            window.openLiquiditySummary = function() {
+                window.open('https://stablecoin-usvt.github.io/liquidity-management/', '_blank');
+            };
+
+            window.openRegulatorySummary = function() {
+                window.open('https://stablecoin-usvt.github.io/Regulations-Report/', '_blank');
+            };
+
+            window.accessStrategicPDF = function() {
+                window.open('https://stablecoin-usvt.github.io/Strategic-Implementation/Strategic-Implementation-USVT-Global-Financial-Restructuring.pdf', '_blank');
+            };
+
+            window.accessLiquidityPDF = function() {
+                window.open('https://stablecoin-usvt.github.io/liquidity-management/Shariah-Compliant%20Liquidity%20Management%20for%20USVT%20Stablecoin%20.pdf', '_blank');
+            };
+
+            window.accessRegulatoryPDF = function() {
+                window.open('https://stablecoin-usvt.github.io/Regulations-Report/HKMA-Ordinance-17-2025.pdf', '_blank');
+            };
+
+            window.showDocumentGuide = function() {
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 10000;
+                `;
+
+                const modalContent = document.createElement('div');
+                modalContent.style.cssText = `
+                    background: white;
+                    padding: 32px;
+                    border-radius: 4px;
+                    max-width: 600px;
+                    margin: 24px;
+                    border: 1px solid #e5e5e5;
+                    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+                    max-height: 80vh;
+                    overflow-y: auto;
+                `;
+
+                modalContent.innerHTML = `
+                    <h3 style="color: #1e1e1e; margin-bottom: 24px; font-size: 1.25rem; font-weight: 500; text-align: center;">📚 USVT Project Documentation</h3>
+                    
+                    <div style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid #e5e5e5;">
+                        <h4 style="color: #1e1e1e; margin-bottom: 8px; font-size: 1rem; font-weight: 500;">🎯 Strategic Implementation</h4>
+                        <p style="color: #666666; line-height: 1.5; margin-bottom: 12px; font-size: 0.875rem;">
+                            The foundational framework for the $1 trillion USD initiative, covering strategic vision, institutional partnerships, and global expansion roadmap across 50+ countries.
+                        </p>
+                        <div style="display: flex; gap: 8px;">
+                            <button onclick="window.open('https://stablecoin-usvt.github.io/Strategic-Implementation/', '_blank')" 
+                                    style="background: #1e1e1e; color: white; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
+                                View Summary
+                            </button>
+                            <button onclick="window.open('https://stablecoin-usvt.github.io/Strategic-Implementation/Strategic-Implementation-USVT-Global-Financial-Restructuring.pdf', '_blank')" 
+                                    style="background: white; color: #1e1e1e; padding: 8px 12px; border: 1px solid #e5e5e5; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
+                                Full PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid #e5e5e5;">
+                        <h4 style="color: #1e1e1e; margin-bottom: 8px; font-size: 1rem; font-weight: 500;">🏦 Liquidity Management</h4>
+                        <p style="color: #666666; line-height: 1.5; margin-bottom: 12px; font-size: 0.875rem;">
+                            Technical framework for Shariah-compliant operations, reserve structuring, and Islamic finance compliance across global markets with comprehensive risk management.
+                        </p>
+                        <div style="display: flex; gap: 8px;">
+                            <button onclick="window.open('https://stablecoin-usvt.github.io/liquidity-management/', '_blank')" 
+                                    style="background: #1e1e1e; color: white; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
+                                View Summary
+                            </button>
+                            <button onclick="window.open('https://stablecoin-usvt.github.io/liquidity-management/Shariah-Compliant%20Liquidity%20Management%20for%20USVT%20Stablecoin%20.pdf', '_blank')" 
+                                    style="background: white; color: #1e1e1e; padding: 8px 12px; border: 1px solid #e5e5e5; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
+                                Full PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 24px;">
+                        <h4 style="color: #1e1e1e; margin-bottom: 8px; font-size: 1rem; font-weight: 500;">⚖️ Regulatory Framework</h4>
+                        <p style="color: #666666; line-height: 1.5; margin-bottom: 12px; font-size: 0.875rem;">
+                            Hong Kong regulatory compliance documentation demonstrating full alignment with HKMA Ordinance No. 17-2025 requirements and global licensing preparation.
+                        </p>
+                        <div style="display: flex; gap: 8px;">
+                            <button onclick="window.open('https://stablecoin-usvt.github.io/Regulations-Report/', '_blank')" 
+                                    style="background: #1e1e1e; color: white; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
+                                View Summary
+                            </button>
+                            <button onclick="window.open('https://stablecoin-usvt.github.io/Regulations-Report/HKMA-Ordinance-17-2025.pdf', '_blank')" 
+                                    style="background: white; color: #1e1e1e; padding: 8px 12px; border: 1px solid #e5e5e5; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 500;">
+                                Full PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; padding-top: 16px; border-top: 1px solid #e5e5e5;">
+                        <button onclick="this.closest('.modal-overlay').remove()" 
+                                style="background: #f8f8f8; color: #1e1e1e; padding: 10px 20px; border: 1px solid #e5e5e5; border-radius: 4px; cursor: pointer; font-weight: 500; font-size: 0.875rem;">
+                            Close
+                        </button>
+                    </div>
+                `;
+
+                modal.className = 'modal-overlay';
+                modal.appendChild(modalContent);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.remove();
+                    }
+                });
+            };
+
+            window.logout = function() {
+                sessionStorage.clear();
+                location.reload();
+            };
+        }
+
+        function logout() {
+            sessionStorage.clear();
+            location.reload();
+        }
+
+        // Check if user is already authenticated (for page refreshes)
+        window.addEventListener('load', function() {
+            const authenticated = sessionStorage.getItem('usvt_authenticated');
+            const accessTime = sessionStorage.getItem('usvt_access_time');
+            
+            if (authenticated && accessTime) {
+                const sessionAge = Date.now() - parseInt(accessTime);
+                const maxSessionAge = 8 * 60 * 60 * 1000; // 8 hours
+                
+                if (sessionAge < maxSessionAge) {
+                    // Session still valid, could auto-redirect to main hub
+                    console.log('Valid session detected');
+                } else {
+                    // Session expired
+                    sessionStorage.clear();
                 }
-            });
-        }
+            }
+        });
 
-        function downloadLiquidityPDF() {
-            window.open('https://stablecoin-usvt.github.io/liquidity-management/Shariah-Compliant%20Liquidity%20Management%20for%20USVT%20Stablecoin%20.pdf', '_blank');
-        }
+        // Prevent right-click and inspect element (basic security)
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
